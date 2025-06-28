@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .result-container {
+            margin: 50px auto;
+            max-width: 700px;
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .result-title {
+            color: #dc3545;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .btn-danger {
+            padding: 8px 25px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result-container">
+        <div class="result-title">Prediction: {{ class_label }}</div>
+        <img src="data:image/jpeg;base64,{{ img_data }}" width="300" class="img-thumbnail">
+        <br>
+        <a href="/" class="btn btn-danger">Try Another</a>
+    </div>
+
+</body>
+</html>
